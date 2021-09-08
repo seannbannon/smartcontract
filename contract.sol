@@ -1,10 +1,14 @@
 pragma solidity 0.5.1;
 
 contract Counter {
-    uint count;
+    uint public count = 0;
 
     event Increment(uint value);
     event Decrement(unit value);
+
+    function getCount() view public returns(uint) {
+        return count;
+    }
 
     function increment() public {
         count += 1;
